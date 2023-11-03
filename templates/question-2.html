@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>{{ survey.title }}</h1>
+    <h2>{{ survey.questions[2] }}</h2>
+    <form action="/answer" method="POST">
+        <input name="question2" type="radio" value="yes" required>
+        <label for="lessthan10k">Less than $10,000</label>
+        <input name="question2" type="radio" value="no" required>
+        <label for="morethan10k">$10,000 or more</label>
+        <button>Next Question</button>
+    </form>
+{% endblock %}
